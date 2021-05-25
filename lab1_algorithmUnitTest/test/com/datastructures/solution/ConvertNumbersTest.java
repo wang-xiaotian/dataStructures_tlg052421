@@ -65,6 +65,5 @@ public class ConvertNumbersTest {
         int[] t3_b = {2,1};
         List<Integer> t3_r = new ArrayList<>(Arrays.asList(1,1,1));
         Assert.assertEquals(converter.intersection(t3_a, t3_b), t3_r);
-
     }
 }

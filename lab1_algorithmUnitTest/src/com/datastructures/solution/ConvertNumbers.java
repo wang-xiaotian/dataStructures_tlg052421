@@ -81,14 +81,21 @@ class ConvertNumbers {
         Arrays.sort(array);
     }
 
+    /**
+     * merge two list and collect same number into a new array list
+     * @param a input
+     * @param b
+     * @return
+     */
     protected List<Integer> intersection(int[] a, int[] b){
         List<Integer> result = new ArrayList<>();
-        this.mergeSort(a);
+        this.mergeSort(a); // sort the array first
         this.mergeSort(b);
         int index_a = 0;
         int index_b = 0;
 
-        // move to right if value is smaller
+        // move to right if the value is smaller
+        // move only one index to right if the values are same, then collect multiple same values
         while(index_a < a.length && index_b < b.length ){
             if(a[index_a] > b[index_b]){
                 index_b ++;
