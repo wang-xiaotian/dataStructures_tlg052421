@@ -33,6 +33,15 @@ public class SortingAlgorithmTest {
     }
 
     @Test
+    public void testBubbleSort_singleElementArray() {
+        int[] a = {0};
+        int[] a_sorted = {0};
+        Assert.assertEquals(a.length, 1);
+        SortingAlgorithm.bubbleSort(a);
+        Assert.assertArrayEquals(a, a_sorted);
+    }
+
+    @Test
     public void testBubbleSort_returnSortedArrayWithDuplicateValues() {
         int[] a = {2,9,3,7,4,3,0,-1,1};
         int[] a_sorted = {-1,0,1,2,3,3,4,7,9};
