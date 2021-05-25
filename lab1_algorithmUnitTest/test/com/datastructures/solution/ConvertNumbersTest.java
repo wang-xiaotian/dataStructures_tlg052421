@@ -46,9 +46,10 @@ public class ConvertNumbersTest {
         System.out.println(converter.convertOctalToBinaryString("-8"));
         System.out.println(Integer.toBinaryString(-8));
 
-        System.out.printf("the number is %d and %d\n", Integer.MAX_VALUE, Integer.MIN_VALUE+1);
-        System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MAX_VALUE)));
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+        System.out.printf("the number is %d and %d\n", Integer.MAX_VALUE+1, Integer.MIN_VALUE+1);
+        System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MAX_VALUE+1)));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE+1));
+        System.out.println(Integer.parseUnsignedInt(Integer.toBinaryString(Integer.MAX_VALUE+1),2));
         System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MIN_VALUE+1)));
         System.out.println(Integer.toBinaryString(Integer.MIN_VALUE+1));
 

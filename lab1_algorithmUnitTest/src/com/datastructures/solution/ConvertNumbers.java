@@ -44,9 +44,19 @@ class ConvertNumbers {
                 }
                 input = input / 2;
             }
+
             StringBuilder binaryString = new StringBuilder();
+            boolean carryOnBit = false;
             if(negative) {
-                int signedBit = INTEGER - result.size();
+                carryOnBit = true;
+                int signedBit = INTEGER;
+                int inputSize = result.size();
+                while(signedBit > 0){
+                    if(signedBit - inputSize > 0){
+
+                    }
+                }
+
                 while (signedBit > 0) {
                     binaryString.append('1');
                     signedBit--;
