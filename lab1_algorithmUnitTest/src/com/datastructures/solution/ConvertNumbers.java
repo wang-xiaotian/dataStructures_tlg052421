@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Stack;
 
 class ConvertNumbers {
+    private final int INTEGER = 32;
+
     public static void main(String[] args) {
         System.out.println("Test");
     }
@@ -43,9 +45,13 @@ class ConvertNumbers {
                 input = input / 2;
             }
             StringBuilder binaryString = new StringBuilder();
-            if(negative)
-                binaryString.append('1');
-
+            if(negative) {
+                int signedBit = INTEGER - result.size();
+                while (signedBit > 0) {
+                    binaryString.append('1');
+                    signedBit--;
+                }
+            }
             while(!result.isEmpty()){
                 binaryString.append(result.pop());
             }
@@ -104,6 +110,7 @@ class ConvertNumbers {
             } else{
                 result.add(b[index_b]);
                 index_a ++; // only increase one, so collect multiple same values
+                index_b ++;
             }
         }
         return result;

@@ -34,17 +34,26 @@ public class ConvertNumbersTest {
         Assert.assertEquals("0", converter.convertOctalToBinaryString("0"));
         Assert.assertEquals("1", converter.convertOctalToBinaryString("1"));
 
+        System.out.printf("the number is %d and %d\n", 1, -1);
         System.out.println(converter.convertOctalToBinaryString("1"));
+        System.out.println(Integer.toBinaryString(1));
         System.out.println(converter.convertOctalToBinaryString("-1"));
         System.out.println(Integer.toBinaryString(-1));
-        System.out.println(Integer.toBinaryString(1));
+
+        System.out.printf("the number is %d and %d\n", 8, -8);
+        System.out.println(converter.convertOctalToBinaryString("8"));
+        System.out.println(Integer.toBinaryString(8));
+        System.out.println(converter.convertOctalToBinaryString("-8"));
+        System.out.println(Integer.toBinaryString(-8));
+
+        System.out.printf("the number is %d and %d\n", Integer.MAX_VALUE, Integer.MIN_VALUE+1);
+        System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MAX_VALUE)));
+        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+        System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MIN_VALUE+1)));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE+1));
 
         // Integer MAX and MIN
         Assert.assertEquals(Integer.toBinaryString(Integer.MAX_VALUE), converter.convertOctalToBinaryString(Integer.toString(Integer.MAX_VALUE)));
-        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
-        System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
-
-        System.out.println(converter.convertOctalToBinaryString(Integer.toString(Integer.MIN_VALUE)));
         //Assert.assertEquals(Integer.toBinaryString(Integer.MIN_VALUE), converter.convertOctalToBinaryString(Integer.toString(Integer.MIN_VALUE)));
         // Long MAX and MIN
     }
